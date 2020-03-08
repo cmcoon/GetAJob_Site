@@ -1,0 +1,46 @@
+[
+    {
+       "id":9,
+       "name":"Levar Stoney",
+       "position":"Mayor",
+       "applied":"06/23/16",
+       "experience":5,
+       "availability":{
+          "M":1,
+          "T":1,
+          "W":1,
+          "Th":1,
+          "F":1,
+          "S":1,
+          "Su":1
+       },
+       "questions":[
+          {
+             "text":"Are you authorized to work in the United States?",
+             "answer":"Yes"
+          }
+       ]
+    },
+    {
+       "id":10,
+       "name":"Trey Anastasio",
+       "position":"Musician",
+       "applied":"07/04/17",
+       "experience":8,
+       "availability":{
+          "M":1,
+          "T":1,
+          "W":1,
+          "Th":1,
+          "F":1,
+          "S":2,
+          "Su":2
+       },
+       "questions":[
+          {
+             "text":"Have you ever been convicted of a felony?",
+             "answer":"Yes"
+          }
+       ]
+    }
+ ]

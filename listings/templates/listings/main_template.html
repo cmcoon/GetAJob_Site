@@ -1,0 +1,30 @@
+{% load static %}
+
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+</head>
+<body>
+
+<div class="header">
+  <h1>Get A Job</h1>
+</div>
+
+<div class="topnav">
+  <a href="/listings/home">Home</a>
+  <a href="/listings">Listings</a>
+  <a href="#">Sort Listings</a>
+  <a href="/listings/admin1" style="float:right">Saved Listings</a>
+</div>
+
+<div class="row">
+	{% block content %}
+	{% endblock content %}
+</div>
+
+<div class="footer">
+  <h2></h2>
+</div>
+
+</body>
+</html>

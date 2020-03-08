@@ -1,0 +1,34 @@
+{% extends "listings/main_template.html" %}
+{% block content %}
+    <div class="card">
+    {% if applicant %}
+	<h2>{{ applicant.name }} </h2>
+    <ul>
+        <li>id: {{ applicant.app_id }}</li>
+		<li>name: {{ applicant.name }}</li>
+		<li>position: {{ applicant.position }}</li>
+		<li>applied: {{ applicant.applied }}</li>
+		<li>experience: {{ applicant.experience }}</li>
+		<li>availablity: {{ str_avail }}</li> 
+		<ul>
+			{% for li in list_avail %}
+			<li>{{ li }}</li>
+			{% endfor %}
+		</ul>
+		{% for q in questions %}
+			<li>Question: {{ q.question_text }}</li>
+			<li>Response: {{ q.answer }}</li>
+		{% endfor %}
+    </ul>
+	{% endif %}
+	
+	<form method="post">
+		{% csrf_token %}
+		<button type="submit" name="add">Save Listing</button>
+	<form method="post">
+		{% csrf_token %}
+	<button type="submit" name="remove">Remove Listing</button>
+		</form>
+	</form>
+    </div>
+{% endblock content %}

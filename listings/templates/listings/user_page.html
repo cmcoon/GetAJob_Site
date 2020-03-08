@@ -1,0 +1,12 @@
+{% extends "listings/main_template.html" %}
+{% block content %}
+  {% for applicant in list %}
+    <div class="card">
+      <h3>{{ applicant.name }} </h2>
+      <h5>Position: {{ applicant.position }}</h5>
+      <h5>Experience: {{ applicant.experience }}</p>
+	  <a href="/listings/{{ applicant.app_id }}/">Details</a></li>	  
+    </div>
+	{% endfor %}
+
+{% endblock content %}
