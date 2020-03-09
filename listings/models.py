@@ -39,4 +39,4 @@ class Saved(models.Model):
     def __str__(self):
         return str(self.saved_pk)
 
-# Create your models here.
+
