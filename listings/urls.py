@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+# Define all urls for /listings app
 urlpatterns = [
     path('home', views.home, name='home'),
     path('', views.listings, name='listings'),
