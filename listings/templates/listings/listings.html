@@ -1,5 +1,21 @@
 {% extends "listings/main_template.html" %}
 {% block content %}
+	<div class="card">
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit" name="order_position">Order By Position</button>
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit" name="order_experience_ascending">Order By Least Experience</button>
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit" name="order_experience_descending">Order By Most Experience</button>
+		<form method="post">
+			{% csrf_token %}
+			<button type="submit" name="reset">Reset</button>
+			</form>
+		</form>
+	</div>
   {% for applicant in list %}
     <div class="card">
       <h2>{{ applicant.name }} </h2>

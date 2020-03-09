@@ -1,5 +1,4 @@
 {% load static %}
-
 <html>
 <head>
 <link rel="stylesheet" href="{% static 'css/layout.css' %}">
@@ -13,13 +12,13 @@
 <div class="topnav">
   <a href="/listings/home">Home</a>
   <a href="/listings">Listings</a>
-  <a href="#">Sort Listings</a>
-  <a href="/listings/admin1" style="float:right">Saved Listings</a>
+  <a href="/listings/admin1">Saved Listings</a>
+  <a href="/listings/account" style="float:right">Account Management</a>
+  
 </div>
 
 <div class="row">
-	{% block content %}
-	{% endblock content %}
+	{% block content %}{% endblock content %}
 </div>
 
 <div class="footer">

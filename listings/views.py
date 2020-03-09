@@ -15,7 +15,48 @@ def listings(request):
     context = {
         'list': Applicant.objects.all(),
     }
+
+    # If order by position button is pressed we populate as such
+    if request.method == 'POST' and 'order_position' in request.POST:
+        context = {
+            'list': Applicant.objects.all().order_by('position'),
+        }
+        # return user to required page
+        return render(request, 'listings/listings.html', context)
+
+    # If order by least experience is desired we populate as such
+    if request.method == 'POST' and 'order_experience_ascending' in request.POST:
+        context = {
+            'list': Applicant.objects.all().order_by('experience'),
+        }
+        # return user to required page
+        return render(request, 'listings/listings.html', context)
+
+    # If order by most experience is desired we populate as such
+    if request.method == 'POST' and 'order_experience_descending' in request.POST:
+        context = {
+            'list': Applicant.objects.all().order_by('-experience'),
+        }
+        # return user to required page
+        return render(request, 'listings/listings.html', context)
+
+    # Reset to primary key order
+    if request.method == 'POST' and 'reset' in request.POST:
+        context = {
+            'list': Applicant.objects.all(),
+        }
+        # return user to required page
+        return render(request, 'listings/listings.html', context)
+
     return render(request, 'listings/listings.html', context)
+
+
+# Home page just a place holder for site demonstration
+def account_management(request):
+    context = {
+        'name': User.objects.get(user_name='admin1'),
+    }
+    return render(request, 'listings/account_management.html', context)
 
 
 # Details page shows each applicants details and
