@@ -33,3 +33,5 @@ This site is meant to take in JSON formatted job listings in the following forma
  ...
  
  These entries can be loaded using the addDB method which parses input and inserts data into sqlite3 database.
+ 
+ To run the site just navigate to the saved directory and type [jobsys manage.py runserver] in the cmd line. Then enter http://localhost:8000/listings/ in a browser to access the site. 
